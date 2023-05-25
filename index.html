@@ -4,58 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
     <title>KATIK</title>
 </head>
 <body>
     <header>
-        <span>Katik</span>
-        <span>Kalkulator Matematik</span>
+            <h1>katik</h1>
+            <nav>
+                <a href="#luas">Luas</a>
+                <a href="#keliling">Keliling</a>
+            </nav>
     </header>
     
     <main>
-        <div>
-            <p>Welcome to Katik</p>
-            <p>Sebuah web apps sederhana yang membantu kalian menghitung luas dan keliling persegi</p>
+        <div class="welcome">
+            <p>Selamat Datang di katik</p>
+            <p>Kalkulator matematik yang membantumu menghitung luas dan keliling persegi dalam satu klik</p>
         </div>
         
-        <div>
+        <section id="luas">
             <h1>Luas Persegi</h1>
-            <div class="figure"></div>
-            <div>
-                <p>Rumus Luas Persegi yaitu:</p>
-                <p>L = s x s</p>
-                <p>Di mana:</p>
-                <p>L=Luas</p>
-                <p>s=Sisi</p>
+            <div class="luas-content">
+                <img src="img/persegi.png" alt="persegi">
+                <div>
+                    <p>Rumus Luas Persegi yaitu:</p>
+                    <p class="rumus-luas">L = s x s</p>
+                    <p>Di mana:</p>
+                    <p>L = Luas (cm<sup>2</sup>)</p>
+                    <p>s = Sisi (cm)</p>
+                </div>
+                <div>
+                    <h3>Hitung Luas Persegi</h3>
+                    <input type="text" placeholder="Nilai Sisi dalam cm" id="sisi-luas">
+                    <br>
+                    <button class="hitung" id="hitung-luas" onclick="hitungLuas()">Hitung</button>
+                    <button class="reset" onclick="resetLuas()">Reset</button>
+                    <p id="rumus-luas"></p>
+                    <p id="menghitung-luas"></p>
+                    <p id="output_luas"></p>
+                </div>
             </div>
-            <div>
-                <h2>Hitung Luas Persegi</h2>
-                <input type="text" placeholder="Nilai Sisi">
-                <button type="submit">Hitung</button>
-                <button>Reset</button>
-            </div>
-        </div>
+        </section>
             
-        <div>
+        <section id="keliling">
             <h1>Keliling Persegi</h1>
-            <div class="figure"></div>
-            <div>
-                <p>Rumus Keliling Persegi yaitu:</p>
-                <p>K = 4 x s</p>
-                <p>Di mana:</p>
-                <p>K=Keliling</p>
-                <p>s=Sisi</p>
+            <div class="keliling-content">
+                <img src="img/persegi.png" alt="persegi">
+                <div>
+                    <p>Rumus Keliling Persegi yaitu:</p>
+                    <p class="rumus-keliling">K = 4 x s</p>
+                    <p>Di mana:</p>
+                    <p>K = Keliling (cm)</p>
+                    <p>s = Sisi (cm)</p>
+                </div>
+                <div>
+                    <h3>Hitung Keliling Persegi</h3>
+                    <input type="text" placeholder="Nilai Sisi dalam cm" id="sisi-keliling">
+                    <br>
+                    <button class="hitung" id="hitung-keliling" onclick="hitungKeliling()">Hitung</button>
+                    <button class="reset" onclick="resetKeliling()">Reset</button>
+                    <p id="rumus-keliling"></p>
+                    <p id="menghitung-keliling"></p>
+                    <p id="output_keliling"></p>
+                </div>
             </div>
-            <div>
-                <h2>Hitung Keliling Persegi</h2>
-                <input type="text" placeholder="Nilai Sisi">
-                <button type="submit">Hitung</button>
-                <button>Reset</button>
-            </div>
-        </div>
+        </section>
     </main>
     
-    <footer></footer>
+    <footer>
+        <div class="footer-title">
+            <h1>katik</h1>
+            <p>kalkulator matematik</p>
+        </div>
+        <div class="social-icon">
+            <img src="/img/Facebook.svg" alt="Facebook">
+            <img src="/img/Instagram.svg" alt="Instagram">
+            <img src="/img/Twitter.svg" alt="Twitter">
+        </div>
+    </footer>
 </body>
 </html>
